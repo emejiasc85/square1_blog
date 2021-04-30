@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UserTableSeeder extends Seeder
 {
@@ -19,6 +20,8 @@ class UserTableSeeder extends Seeder
             'name'      => 'Admin',
             'email'     => 'admin@client.com',
             'password'  => Hash::make('password'),
+            'api_token' => Str::random(100),
+
         ]);
     }
 }
