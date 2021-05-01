@@ -58,7 +58,9 @@
                             <p class="mt-2 text-gray-600">{{post.short_description}}</p>
                         </div>
                         <div class="flex justify-between items-center mt-4">
-                            <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                            <inertia-link :href="post.url" class="text-blue-500 hover:underline">
+                                Read more
+                            </inertia-link>
                             <div>
                                 <a href="#" class="flex items-center">
                                     <h1 class="text-gray-700 font-bold hover:underline">{{post.author_name}}</h1>
