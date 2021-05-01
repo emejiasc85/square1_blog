@@ -4,8 +4,8 @@
             <div class="flex flex-col container mx-auto md:flex-row md:items-center md:justify-between">
                 <div class="flex justify-between items-center">
                     <div>
-                        <inertia-link href="/" class="text-gray-800 text-xl font-bold md:text-2xl">
-                            Square1 Blog
+                        <inertia-link href="/" class="text-gray-800 text-xl font-bold md:text-2xl flex">
+                            <img src="/images/logo.jpeg" class="flex-col" alt="square1"> <span class="flex-col pt-1 ml-2"> Blog</span>
                         </inertia-link>
                     </div>
                     <div>
