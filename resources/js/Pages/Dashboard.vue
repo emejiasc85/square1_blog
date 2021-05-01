@@ -107,7 +107,7 @@
         data(){
             return{
                 posts:[],
-                filter      : {
+                filter : {
                     order_col:'publication_date',
                     order:'desc',
                 },
@@ -128,10 +128,10 @@
 
             index(page = 1){
                 let parameters = {
-                    page    : page,
+                    page : page,
                     order_col: this.filter.order_col,
-                    order   : this.filter.order,
-                    search  : this.filter.search,
+                    order: this.filter.order,
+                    search: this.filter.search,
                 };
 
                 Post.get(parameters, data => {
@@ -146,7 +146,7 @@
 
                 if(this.filter.order_col == '' && this.filter.order == ''){
                     this.filter.order_col = col;
-                    this.filter.order    = 'desc';
+                    this.filter.order = 'desc';
                 }
                 
                 else if(this.filter.order_col == col && this.filter.order == 'desc'){
@@ -156,7 +156,7 @@
 
                 else{
                     this.filter.order_col = '';
-                    this.filter.order     = '';
+                    this.filter.order = '';
                 }
 
                 this.index();
