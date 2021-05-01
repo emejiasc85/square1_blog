@@ -62,8 +62,8 @@
                                 </button>
                             </div>
                             <select v-model="order" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                                <option value="asc" selected>Latest</option>
-                                <option value="desc">Oldest</option>
+                                <option value="desc" selected>Latest</option>
+                                <option value="asc">Oldest</option>
                             </select>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
             return{
                 posts:[],
                 pagination:{},
-                order:'asc',
+                order:'desc',
                 search:''
             }
         },
