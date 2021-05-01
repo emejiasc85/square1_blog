@@ -16,6 +16,9 @@ use Inertia\Inertia;
 |
 */
 
+require __DIR__.'/auth.php';
+
+
 Route::middleware('page-cache')->get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -36,4 +39,3 @@ Route::middleware(['auth', 'verified'])->group(function(){
 });
 
 
-require __DIR__.'/auth.php';
