@@ -34,8 +34,6 @@
                     </inertia-link>
                 </div>
             </div>
-
-            
         </template>
 
          <div class="py-12">
@@ -96,7 +94,6 @@
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
     import Post from '@/Models/Admin/Post'
     import Paginator from '@/Components/Paginator'
-
 
     export default {
         components: {
