@@ -20,6 +20,14 @@ class Post extends Model
         $this->attributes['slug'] = Str::slug($value);
     }
 
+
+    /* relations */
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     /* scopes */
 
     public function scopeSearch($query)
