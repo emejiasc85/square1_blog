@@ -1,7 +1,5 @@
 # Square1 Blog
 
-Advanced form generation for Laravel.
-
 ## Requeriments
 The current project requeriments are:
 - PHP >= 7.3
