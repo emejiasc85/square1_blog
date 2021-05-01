@@ -20,6 +20,7 @@ class PostResource extends JsonResource
             'id'                        => $this->id,
             'title'                     => $this->title,
             'slug'                      => $this->slug,
+            'url'                       => route('show_post', [$this->id, $this->slug]),
             'description'               => $this->description,
             'short_description'         => Str::limit( strip_tags($this->description)),
             'publication_date'          => $this->publication_date,

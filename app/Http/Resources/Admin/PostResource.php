@@ -19,6 +19,8 @@ class PostResource extends JsonResource
             'title'            => $this->title,
             'description'      => $this->description,
             'publication_date' => $this->publication_date,
+            'url'              => route('show_post', [$this->id, $this->slug]),
+
         ];
     }
 }
