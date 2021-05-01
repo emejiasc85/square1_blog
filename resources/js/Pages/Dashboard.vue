@@ -108,8 +108,8 @@
             return{
                 posts:[],
                 filter      : {
-                    order:'publication_date',
-                    order_col:'desc',
+                    order_col:'publication_date',
+                    order:'desc',
                 },
                 pagination:{},
             }
