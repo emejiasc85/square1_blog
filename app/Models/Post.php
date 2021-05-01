@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
@@ -20,6 +21,15 @@ class Post extends Model
         $this->attributes['slug'] = Str::slug($value);
     }
 
+    public function getUrlAttribute()
+    {
+        return route('show_post', [$this->id, $this->slug]);
+    }
+    
+    public function getPublicationDateFormatedAttribute()
+    {
+        return Carbon::parse($this->publication_date)->format('F d\\, Y');
+    }
 
     /* relations */
 
@@ -43,4 +53,5 @@ class Post extends Model
             $query->orderBy(request()->order_col, request()->order);
         });
     }
+
 }
