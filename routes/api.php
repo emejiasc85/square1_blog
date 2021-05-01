@@ -26,7 +26,7 @@ Route::namespace('Api')->group(function(){
     Route::namespace('V1')->prefix('v1')->group(function(){
         
         Route::get('posts', [PublicPostController::class, 'index']);
-        Route::get('posts/{post}/{slug}', [PublicPostController::class, 'show']);
+        Route::get('posts/{post}', [PublicPostController::class, 'show']);
 
         Route::namespace('Admin')->prefix('admin')->middleware('auth:api')->group(function(){
             Route::get('posts', [PostController::class, 'index']);
