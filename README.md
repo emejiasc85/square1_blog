@@ -15,9 +15,9 @@ The current project requeriments are:
 - Create a <code>.env</code> File, based on <code>.env.example</code> file
 - Config <code>.env</code> File
 - Run <code>php artisan test</code> to test the project
-- Run <code>php artisan migrate</code> command
-- Run <code>php artisan db:seed --class=UserTableSeeder</code> command
-- Run <code>php artisan posts:sync </code> to get posts from the ahother web platform
+- Run <code>php artisan migrate</code>
+- Run <code>php artisan db:seed --class=UserTableSeeder</code> to insert the admin user
+- Run <code>php artisan posts:sync </code> to get posts from the ahother web platform (need first run the user seed)
 - Run (Optional) <code>php artisan db:seed --class=PostTableSeeder</code> if you need to see pagination and filter functionalities
 
 Thanks for your time, all feedback is welcome.
