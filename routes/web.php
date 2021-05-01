@@ -16,14 +16,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
+Route::middleware('page-cache')->get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
     ]);
 });
 
-Route::get('/{post}/{slug}', [PostController::class, 'show'])->name('show_post');
+Route::middleware('page-cache')->get('/{post}/{slug}', [PostController::class, 'show'])->name('show_post');
 
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/dashboard', function () {
@@ -33,7 +33,6 @@ Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/admin/posts/create', function () {
         return Inertia::render('Admin/Posts/Create');
     })->name('posts.create');
-
 });
 
 

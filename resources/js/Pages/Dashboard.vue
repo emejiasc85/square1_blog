@@ -138,8 +138,7 @@
             },
 
             sortBy(col){
-                
-
+            
                 if(this.filter.order_col == '' && this.filter.order == ''){
                     this.filter.order_col = col;
                     this.filter.order = 'desc';
