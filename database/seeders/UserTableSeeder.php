@@ -21,7 +21,6 @@ class UserTableSeeder extends Seeder
             'email'     => 'admin@client.com',
             'password'  => Hash::make('password'),
             'api_token' => Str::random(100),
-
         ]);
     }
 }
