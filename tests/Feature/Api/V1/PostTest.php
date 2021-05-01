@@ -76,10 +76,10 @@ class PostTest extends TestCase{
     
     function test_show_post()
     {
-
+        $this->withoutExceptionHandling();
         $post = Post::factory()->create();
 
-        $this->getJson('api/v1/posts/'.$post->id.'/'.$post->slug)
+        $this->getJson('api/v1/posts/'.$post->id)
             ->assertStatus(200)
             ->assertJson([
                 'data' => [
